@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.eventCreationController">
+   <top>
+      <AnchorPane prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #0589ff;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="WHITE" layoutX="291.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create an Event">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #0589ff;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="308.0" layoutY="12.0" mnemonicParsing="false" onAction="#createEvent" text="Create Event" />
+         </children></AnchorPane>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="eventLocation" layoutX="236.0" layoutY="80.0" prefHeight="26.0" prefWidth="234.0" promptText="Location(6-25)" />
+            <DatePicker fx:id="datePicker" layoutX="235.0" layoutY="124.0" prefHeight="26.0" prefWidth="236.0" promptText="Start Date" />
+            <TextField fx:id="eventName" layoutX="236.0" layoutY="35.0" prefHeight="26.0" prefWidth="234.0" promptText="Event Name (6-25)" />
+            <TextArea fx:id="eventDescription" layoutX="235.0" layoutY="166.0" prefHeight="191.0" prefWidth="236.0" promptText="Description (max 300 chars)" />
+            <Label fx:id="wrg" layoutX="310.0" layoutY="14.0" prefHeight="18.0" prefWidth="234.0" textFill="RED">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="crt" layoutX="266.0" layoutY="13.0" prefHeight="18.0" prefWidth="234.0" text="Event Successfully Created!" textAlignment="JUSTIFY" textFill="#00ff2a">
+               <font>
+                  <Font name="System Italic" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

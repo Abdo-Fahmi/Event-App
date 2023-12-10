@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.eventDisplayController">
+   <top>
+      <AnchorPane prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #0589ff;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="WHITE" layoutX="297.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Viewing Event">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #0589ff;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="616.0" layoutY="12.0" mnemonicParsing="false" onAction="#goBack" text="Go Back" />
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#0589ff" layoutX="59.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Event Creator">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="creatorName" layoutX="162.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NA" />
+            <Text fill="#0589ff" layoutX="59.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Event Name:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fill="#0589ff" layoutX="58.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fill="#0589ff" layoutX="59.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fill="#0589ff" layoutX="342.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Event Details:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="eventName" layoutX="162.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NA" />
+            <Text fx:id="eventLocation" layoutX="162.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NA" />
+            <Button layoutX="90.0" layoutY="346.0" mnemonicParsing="false" onAction="#reserve" text="Register" />
+            <Text fx:id="date" layoutX="162.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NA" />
+            <ListView fx:id="attendees" layoutX="580.0" layoutY="32.0" prefHeight="368.0" prefWidth="156.0" />
+            <Text fill="#0589ff" layoutX="633.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Attendees" />
+            <Label fx:id="wrg" layoutX="74.0" layoutY="308.0" prefHeight="18.0" prefWidth="244.0" textFill="RED" />
+            <Label fx:id="crt" layoutX="75.0" layoutY="308.0" prefHeight="18.0" prefWidth="227.0" textFill="#00ff37" />
+            <TextFlow fx:id="description" layoutX="288.0" layoutY="59.0" prefHeight="266.0" prefWidth="234.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
