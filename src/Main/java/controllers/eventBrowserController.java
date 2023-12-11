@@ -1,6 +1,6 @@
 package controllers;
 
-import Iterator.iteratorCreator;
+import iterator.iteratorCreator;
 import core.dbUtils;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -19,6 +19,7 @@ public class eventBrowserController implements Observer{
     @FXML private GridPane eventGrid;
     @FXML private Button nextEventPage;
     @FXML private Button prevEventPage;
+
     //switch between events on the browsing page and control navigation buttons so that they only appear when needed
     @FXML
     private void nextPage() {

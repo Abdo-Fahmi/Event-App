@@ -1,6 +1,6 @@
 package models;
 
-import Iterator.baseIterator;
+import iterator.baseIterator;
 import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 import proxyFlyweight.proxyEvent;
