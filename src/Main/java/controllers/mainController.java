@@ -2,7 +2,7 @@ package controllers;
 
 import java.io.IOException;
 
-import Main.App;
+import core.App;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.layout.StackPane;
@@ -24,7 +24,7 @@ public class mainController {
     
     public void logout() throws IOException {
         App app = new App();
-        app.changeScenes("/resources/LOGIN_PAGE.fxml");
+        app.changeScenes("/LOGIN_PAGE.fxml");
     }
 
     //setting the parent for the back button before jumping to a different page

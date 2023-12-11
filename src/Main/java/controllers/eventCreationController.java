@@ -2,8 +2,8 @@ package controllers;
 
 import java.sql.Date;
 
-import Main.dbUtils;
-import Main.inputFilter;
+import core.dbUtils;
+import core.inputFilter;
 import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;

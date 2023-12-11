@@ -1,4 +1,4 @@
-package Main;
+package core;
 
 public class currUser {
     private static currUser userInstance;

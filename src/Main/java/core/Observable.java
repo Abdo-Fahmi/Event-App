@@ -1,4 +1,4 @@
-package Main;
+package core;
 
 import controllers.Observer;
 

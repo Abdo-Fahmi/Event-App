@@ -2,8 +2,8 @@ package models;
 
 import java.util.ArrayList;
 
-import Main.currUser;
-import Main.dbUtils;
+import core.currUser;
+import core.dbUtils;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.text.Text;

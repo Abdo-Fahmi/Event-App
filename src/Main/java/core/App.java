@@ -1,7 +1,4 @@
-package Main;
-
-import java.io.IOException;
-import java.util.Objects;
+package core;
 
 import controllers.mainController;
 import controllers.pageNavigator;
@@ -11,6 +8,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+
+import java.io.IOException;
+import java.util.Objects;
 
 public class App extends Application{
     private static Stage stg;
@@ -25,7 +25,7 @@ public class App extends Application{
         stg = mainStage;
         Parent root;
         try {
-            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/resources/LOGIN_PAGE.fxml")));
+            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/LOGIN_PAGE.fxml")));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

@@ -2,8 +2,8 @@ package controllers;
 
 import java.util.ArrayList;
 
-import Main.currUser;
-import Main.dbUtils;
+import core.currUser;
+import core.dbUtils;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.HBox;

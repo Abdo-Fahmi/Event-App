@@ -2,9 +2,9 @@ package controllers;
 
 import java.io.IOException;
 
-import Main.App;
-import Main.dbUtils;
-import Main.inputFilter;
+import core.App;
+import core.dbUtils;
+import core.inputFilter;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
@@ -29,7 +29,7 @@ public class signupController {
     @FXML private PasswordField pfRepeatPassword;
     @FXML
     void switchAuth() throws IOException {
-        app.changeScenes("/resources/LOGIN_PAGE.fxml");
+        app.changeScenes("/LOGIN_PAGE.fxml");
     }
     /*
      * setting up filter on the input field to reduce faulty input

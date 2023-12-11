@@ -1,15 +1,15 @@
 package controllers;
 
-import java.util.ArrayList;
-import java.util.Objects;
-
 import Iterator.iteratorCreator;
-import Main.dbUtils;
+import core.dbUtils;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 import models.eventBrowserModel;
 import proxyFlyweight.proxyEvent;
+
+import java.util.ArrayList;
+import java.util.Objects;
 
 public class eventBrowserController implements Observer{
     private final iteratorCreator iterator = new iteratorCreator();
@@ -44,7 +44,7 @@ public class eventBrowserController implements Observer{
         eventBrowserModel.displayNextEvents(eventGrid);
         eventBrowserModel.btnVisibility(nextEventPage, prevEventPage);
 
-        String css = Objects.requireNonNull(this.getClass().getResource("/resources/CSStyle.css")).toExternalForm();
+        String css = Objects.requireNonNull(this.getClass().getResource("/CSStyle.css")).toExternalForm();
         eventGrid.getStylesheets().add(css);
     }
 

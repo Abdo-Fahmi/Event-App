@@ -6,14 +6,14 @@ import java.util.Objects;
 
 public class pageNavigator {
 
-    public static final String DASHBOARD    = "/resources/DASHBOARD_PAGE.fxml";
-    public static final String LOG_IN = "/resources/LOGIN_PAGE.fxml";
-    public static final String SIGN_UP = "/resources/SIGNUP_PAGE.fxml";
-    public static final String EVENT_BROWSER = "/resources/BROWSING_PAGE.fxml";
-    public static final String CURRENT_EVENT = "/resources/VIEW_EVENT_PAGE.fxml";
-    public static final String MY_EVENTS = "/resources/MY_EVENTS_PAGE.fxml";
-    public static final String PROFILE_PAGE = "/resources/MY_PROFILE_PAGE.fxml";
-    public static final String CREATE_EVENT = "/resources/CREATE_EVENT_PAGE.fxml";
+    public static final String DASHBOARD    = "/DASHBOARD_PAGE.fxml";
+    public static final String LOG_IN = "/LOGIN_PAGE.fxml";
+    public static final String SIGN_UP = "/SIGNUP_PAGE.fxml";
+    public static final String EVENT_BROWSER = "/BROWSING_PAGE.fxml";
+    public static final String CURRENT_EVENT = "/VIEW_EVENT_PAGE.fxml";
+    public static final String MY_EVENTS = "/MY_EVENTS_PAGE.fxml";
+    public static final String PROFILE_PAGE = "/MY_PROFILE_PAGE.fxml";
+    public static final String CREATE_EVENT = "/CREATE_EVENT_PAGE.fxml";
 
     /** The main application layout controller. */
     private static mainController mController;

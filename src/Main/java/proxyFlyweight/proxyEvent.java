@@ -1,14 +1,14 @@
 package proxyFlyweight;
 
-import java.sql.Date;
-
-import Main.dbUtils;
+import core.dbUtils;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+
+import java.sql.Date;
 
 public class proxyEvent implements eventInterface {
     private final dbUtils db = dbUtils.getInstance();

@@ -2,9 +2,9 @@ package controllers;
 
 import java.io.IOException;
 
-import Main.App;
-import Main.currUser;
-import Main.inputFilter;
+import core.App;
+import core.currUser;
+import core.inputFilter;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
@@ -17,7 +17,7 @@ public class loginController {
     @FXML private PasswordField password;
     @FXML
     void switchAuth() throws IOException {
-        app.changeScenes("/resources/SIGNUP_PAGE.fxml");
+        app.changeScenes("/SIGNUP_PAGE.fxml");
     }
 
     public void initialize() { }

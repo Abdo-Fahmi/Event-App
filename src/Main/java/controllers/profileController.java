@@ -2,10 +2,10 @@ package controllers;
 
 import java.io.IOException;
 
-import Main.App;
-import Main.currUser;
-import Main.dbUtils;
-import Main.inputFilter;
+import core.App;
+import core.currUser;
+import core.dbUtils;
+import core.inputFilter;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
