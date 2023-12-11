@@ -62,11 +62,10 @@ public class proxyEvent implements eventInterface {
         HBox hbox = new HBox();
         VBox box = new VBox();
         Label name = new Label(eventName);
-        name.setAlignment(Pos.CENTER);
         Text location = new Text(eventLocation);
+        location.getStyleClass().add("text");
 
         Label date = new Label(eventDate.toString());
-        date.setAlignment(Pos.CENTER);
         box.getChildren().setAll(name ,location);
 
         Button show = new Button();

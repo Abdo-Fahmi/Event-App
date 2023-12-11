@@ -1,1 +1,2 @@
-# HI
+# Event Scheduling/Management App
+:)

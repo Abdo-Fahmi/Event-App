@@ -1,6 +1,7 @@
 package controllers;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 import core.currUser;
 import core.dbUtils;
@@ -21,6 +22,7 @@ public class myEventsController implements Observer{
     private void displayUserCreatedEvents() {
         eventsModel.switchDisplayedEvents(eventList, events);
     }
+
     @FXML
     private void displayUserReservations() {
         eventsModel.switchDisplayedEvents(eventList, reservations);
@@ -38,6 +40,8 @@ public class myEventsController implements Observer{
             }
         }
         displayUserCreatedEvents();
+        String css = Objects.requireNonNull(this.getClass().getResource("/CSStyle.css")).toExternalForm();
+        eventList.getStylesheets().add(css);
         db.subscribe(this);
     }
     //updating the event created by the user and their reservations when told by the database
@@ -46,7 +50,6 @@ public class myEventsController implements Observer{
         events = db.getMyEvents(user.getUserID());
         resIDs = db.getResIDs(user.getUserID());
         reservations.clear();
-        //reservations = new ArrayList<proxyEvent>();
         for(Integer i: resIDs) {
             reservations.add(db.getReservedEvent(i));
         }

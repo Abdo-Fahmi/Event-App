@@ -1,7 +1,6 @@
 package controllers;
 
 import java.sql.Date;
-
 import core.dbUtils;
 import core.inputFilter;
 import javafx.fxml.FXML;

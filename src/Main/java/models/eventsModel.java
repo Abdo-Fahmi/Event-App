@@ -11,8 +11,7 @@ public class eventsModel {
         list.getItems().clear();
         if(events == null ) return;
         for(proxyEvent i: events) {
-            HBox box = i.displayListProxyEvent();
-            list.getItems().add(box);
+            list.getItems().add(i.displayListProxyEvent());
         }
     }
 }
