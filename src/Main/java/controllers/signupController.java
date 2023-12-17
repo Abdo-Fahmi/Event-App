@@ -19,8 +19,6 @@ public class signupController {
             checks for at least one dot in the domain name and after the dot, it consists only the letters. The top-level domain should have only two to six letters which is also checked by this regex.
     */
     private static final dbUtils db = dbUtils.getInstance();
-    private static final String usrRegex = "^[a-zA-Z][a-zA-Z0-9_]{6,19}$";
-    private static final String emailRegex = "^[\\w!#$%&'*+/=?`{|}~^-]+(?:\\.[\\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}";
     @FXML private Button signUp;
     @FXML private Label wrg;
     @FXML private TextField tfUsername;
@@ -40,6 +38,7 @@ public class signupController {
         inputFilter.setTextFieldLengthFormatter(tfUsername, 20);
         inputFilter.setTextFieldLengthFormatter(pfRepeatPassword, 20);
     }
+
     public void signUp() throws IOException {
         String usr = tfUsername.getText().trim();
         String pass = pfPassword.getText().trim();
@@ -56,6 +55,9 @@ public class signupController {
 
     //validating the input entered by the user before proceeding with registration
     public static boolean validateSignUpInfo(Label wrg, String usr, String email, String pass, String rpass) {
+        String usrRegex = "^[a-zA-Z][a-zA-Z0-9_]{6,19}$";
+        String emailRegex = "^[\\w!#$%&'*+/=?`{|}~^-]+(?:\\.[\\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}";
+
         if(db.getUserID(usr) != -1) {
             wrg.setText("Username already exists!");
             return false;

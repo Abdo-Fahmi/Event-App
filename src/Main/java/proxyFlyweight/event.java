@@ -20,7 +20,6 @@ public class event implements eventInterface{
         this.eventLocation = eventLocation;
         this.eventDate = eventDate;
         this.description = description;
-        
     }
 
     @Override

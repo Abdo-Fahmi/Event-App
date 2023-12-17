@@ -6,7 +6,6 @@ import proxyFlyweight.proxyEvent;
  * the use of this pattern will allow for future expansion by
  * letting us change iteration logic to follow possible restrictions
  * such as a search bar
- * 
  */
 public class baseIterator implements iterator{
     private final ArrayList<proxyEvent> eventList;

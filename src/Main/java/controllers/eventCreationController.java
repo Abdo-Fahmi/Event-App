@@ -42,7 +42,7 @@ public class eventCreationController {
     }
 
     public boolean validateEventInfo(String name, String location) {
-        String lengthCheck = "^[a-zA-Z][a-zA-Z0-9_]{5,19}$";
+        String lengthCheck = "^[a-zA-Z][a-zA-Z0-9 _]{5,19}$";
         if(!name.matches(lengthCheck)) {
             wrg.setVisible(true);
             wrg.setText("Invalid Name!");

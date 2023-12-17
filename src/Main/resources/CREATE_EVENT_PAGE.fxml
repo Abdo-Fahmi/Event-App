@@ -10,26 +10,29 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.eventCreationController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.eventCreationController">
    <top>
-      <AnchorPane prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #0589ff;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #12111A;" BorderPane.alignment="CENTER">
          <children>
-            <Text fill="WHITE" layoutX="291.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create an Event">
+            <Text fill="WHITE" layoutX="262.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create an Event">
                <font>
-                  <Font size="17.0" />
+                  <Font name="System Bold" size="24.0" />
                </font>
             </Text>
          </children>
       </AnchorPane>
    </top>
    <bottom>
-      <AnchorPane prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #0589ff;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #12111A;" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="308.0" layoutY="12.0" mnemonicParsing="false" onAction="#createEvent" text="Create Event" />
+            <Button layoutX="268.0" layoutY="10.0" mnemonicParsing="false" onAction="#createEvent" prefHeight="26.0" prefWidth="163.0" style="-fx-background-color: #008000;" text="Create Event" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
          </children></AnchorPane>
    </bottom>
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #005e82;" BorderPane.alignment="CENTER">
          <children>
             <TextField fx:id="eventLocation" layoutX="236.0" layoutY="80.0" prefHeight="26.0" prefWidth="234.0" promptText="Location(6-25)" />
             <DatePicker fx:id="datePicker" layoutX="235.0" layoutY="124.0" prefHeight="26.0" prefWidth="236.0" promptText="Start Date" />

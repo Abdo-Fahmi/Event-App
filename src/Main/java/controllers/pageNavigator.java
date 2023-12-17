@@ -24,7 +24,7 @@ public class pageNavigator {
     /**
      * Loads the nodes specified by the fxml file into the
      * pageHolder pane of the main application layout.
-     *
+     * ---------------------------------------------------------------
      * Previously loaded page for the same fxml file are not cached.
      * The fxml is loaded anew and a new page node hierarchy generated
      * every time this method is invoked.

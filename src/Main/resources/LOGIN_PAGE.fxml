@@ -1,41 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.loginController">
    <left>
-      <HBox alignment="CENTER" prefHeight="400.0" prefWidth="350.0" style="-fx-background-color: #0598ff;" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="419.0" style="-fx-background-color: #005e82;">
          <children>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Event Reservation System">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Event Reservation System" textAlignment="CENTER" wrappingWidth="441.3515625">
                <font>
-                  <Font size="23.0" />
+                  <Font name="System Bold" size="24.0" />
                </font>
             </Text>
+            <Text fill="#f4f4f4" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account?">
+               <VBox.margin>
+                  <Insets top="100.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Button fx:id="signUp" mnemonicParsing="false" onAction="#switchAuth" prefHeight="40.0" prefWidth="187.0" style="-fx-background-color: #12111A;" text="Sign Up" textAlignment="CENTER" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
          </children>
-      </HBox>
+      </VBox>
    </left>
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="600.0" prefWidth="453.0" style="-fx-background-color: #12111A;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="logIn" layoutX="251.0" layoutY="334.0" mnemonicParsing="false" onAction="#authLogIn" prefHeight="30.0" prefWidth="73.0" style="-fx-background-color: #0598ff;" text="Login" />
-            <Text fill="#0598ff" layoutX="236.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Login">
+            <Button fx:id="logIn" layoutX="122.0" layoutY="337.0" mnemonicParsing="false" onAction="#authLogIn" prefHeight="40.0" prefWidth="214.0" style="-fx-background-color: #005e82;" text="Login" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="KEY" size="20.0" wrappingWidth="16.999999046325684" />
+               </graphic>
                <font>
-                  <Font size="22.0" />
+                  <Font size="18.0" />
+               </font></Button>
+            <Text fill="WHITE" layoutX="79.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Log In" textAlignment="CENTER" wrappingWidth="299.6083297729492">
+               <font>
+                  <Font size="36.0" />
                </font>
             </Text>
-            <Text fill="#0589ff" layoutX="232.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account?" />
-            <TextField fx:id="username" layoutX="213.0" layoutY="212.0" promptText="Username" />
-            <PasswordField fx:id="password" layoutX="213.0" layoutY="274.0" promptText="Password" />
-            <Label fx:id="wrg" layoutX="168.0" layoutY="177.0" prefHeight="18.0" prefWidth="238.0" textFill="RED" />
-            <Button fx:id="signUp" layoutX="238.0" layoutY="431.0" mnemonicParsing="false" onAction="#switchAuth" prefHeight="31.0" prefWidth="112.0" text="Sign Up" />
+            <TextField fx:id="username" layoutX="122.0" layoutY="210.0" prefHeight="40.0" prefWidth="214.0" promptText="Username">
+               <font>
+                  <Font size="14.0" />
+               </font></TextField>
+            <PasswordField fx:id="password" layoutX="122.0" layoutY="272.0" prefHeight="40.0" prefWidth="214.0" promptText="Password">
+               <font>
+                  <Font size="14.0" />
+               </font></PasswordField>
+            <Label fx:id="wrg" layoutX="122.0" layoutY="181.0" prefHeight="18.0" prefWidth="238.0" textFill="RED">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font></Label>
          </children>
       </AnchorPane>
    </center>

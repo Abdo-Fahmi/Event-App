@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
@@ -11,58 +12,68 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.eventDisplayController">
    <top>
-      <AnchorPane prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #0589ff;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #12111A;" BorderPane.alignment="CENTER">
          <children>
             <Text fill="WHITE" layoutX="297.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Viewing Event">
                <font>
-                  <Font size="17.0" />
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Text>
+            <Button alignment="CENTER" layoutX="22.0" layoutY="9.0" mnemonicParsing="false" onAction="#goBack" prefHeight="30.0" prefWidth="34.0" style="-fx-background-color: #ffffff;" textAlignment="JUSTIFY">
+               <graphic>
+                  <FontAwesomeIconView fill="#35ae2f" glyphName="CHEVRON_LEFT" textAlignment="JUSTIFY">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </FontAwesomeIconView>
+               </graphic></Button>
          </children>
       </AnchorPane>
    </top>
    <bottom>
-      <AnchorPane prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #0589ff;" BorderPane.alignment="CENTER">
-         <children>
-            <Button layoutX="616.0" layoutY="12.0" mnemonicParsing="false" onAction="#goBack" text="Go Back" />
-         </children>
-      </AnchorPane>
+      <AnchorPane prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #12111A;" BorderPane.alignment="CENTER" />
    </bottom>
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #005e82;" BorderPane.alignment="CENTER">
          <children>
-            <Text fill="#0589ff" layoutX="59.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Event Creator">
+            <Text fill="WHITE" layoutX="40.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Event Creator :" wrappingWidth="102.9866943359375">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold" size="14.0" />
                </font>
             </Text>
             <Text fx:id="creatorName" layoutX="162.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NA" />
-            <Text fill="#0589ff" layoutX="59.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Event Name:">
+            <Text fill="WHITE" layoutX="40.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Event Name :">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold" size="14.0" />
                </font>
             </Text>
-            <Text fill="#0589ff" layoutX="58.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location">
+            <Text fill="WHITE" layoutX="40.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location :">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold" size="14.0" />
                </font>
             </Text>
-            <Text fill="#0589ff" layoutX="59.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
+            <Text fill="WHITE" layoutX="40.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date :">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold" size="14.0" />
                </font>
             </Text>
-            <Text fill="#0589ff" layoutX="342.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Event Details:">
+            <Text fill="WHITE" layoutX="348.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Event Details:">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Text>
             <Text fx:id="eventName" layoutX="162.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NA" />
             <Text fx:id="eventLocation" layoutX="162.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NA" />
-            <Button layoutX="90.0" layoutY="346.0" mnemonicParsing="false" onAction="#reserve" text="Register" />
+            <Button layoutX="48.0" layoutY="346.0" mnemonicParsing="false" onAction="#reserve" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #ffffff;" text="Register" textAlignment="CENTER" textFill="#35ae2f">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
             <Text fx:id="date" layoutX="162.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NA" />
             <ListView fx:id="attendees" layoutX="580.0" layoutY="32.0" prefHeight="368.0" prefWidth="156.0" />
-            <Text fill="#0589ff" layoutX="633.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Attendees" />
+            <Text fill="WHITE" layoutX="633.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Attendees">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Text>
             <Label fx:id="wrg" layoutX="74.0" layoutY="308.0" prefHeight="18.0" prefWidth="244.0" textFill="RED" />
             <Label fx:id="crt" layoutX="75.0" layoutY="308.0" prefHeight="18.0" prefWidth="227.0" textFill="#00ff37" />
             <TextFlow fx:id="description" layoutX="288.0" layoutY="59.0" prefHeight="266.0" prefWidth="234.0" />

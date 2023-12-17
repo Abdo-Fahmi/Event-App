@@ -9,52 +9,64 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.profileController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.profileController">
    <bottom>
-      <AnchorPane prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #0589ff;" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #12111A;" BorderPane.alignment="CENTER" />
    </bottom>
    <top>
-      <AnchorPane prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #0589ff;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #12111A;" BorderPane.alignment="CENTER">
          <children>
-            <Text fill="WHITE" layoutX="310.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Profile">
+            <Text fill="WHITE" layoutX="279.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account Settings">
                <font>
-                  <Font size="18.0" />
+                  <Font name="System Bold" size="24.0" />
                </font>
             </Text>
          </children>
       </AnchorPane>
    </top>
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #005e82;" BorderPane.alignment="CENTER">
          <children>
-            <Text fill="#0589ff" layoutX="38.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Username:">
+            <Text fill="WHITE" layoutX="21.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Username:">
                <font>
-                  <Font size="14.0" />
+                  <Font size="18.0" />
                </font>
             </Text>
-            <Button layoutX="350.0" layoutY="23.0" mnemonicParsing="false" onAction="#updateUser" text="Update" />
-            <Text fill="#0589ff" layoutX="38.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Email:">
+            <Button layoutX="350.0" layoutY="23.0" mnemonicParsing="false" onAction="#updateUser" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #ffffff;" text="Update">
                <font>
                   <Font size="14.0" />
+               </font></Button>
+            <Text fill="WHITE" layoutX="24.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Email:">
+               <font>
+                  <Font size="18.0" />
                </font>
             </Text>
-            <Button layoutX="350.0" layoutY="71.0" mnemonicParsing="false" onAction="#updateEmail" text="Update" />
-            <Text fill="#0589ff" layoutX="40.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Password:">
+            <Button layoutX="350.0" layoutY="71.0" mnemonicParsing="false" onAction="#updateEmail" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #ffffff;" text="Update">
                <font>
                   <Font size="14.0" />
+               </font></Button>
+            <Text fill="WHITE" layoutX="24.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Password:">
+               <font>
+                  <Font size="18.0" />
                </font>
             </Text>
-            <Button layoutX="350.0" layoutY="174.0" mnemonicParsing="false" onAction="#changePass" text="Update" />
+            <Button layoutX="350.0" layoutY="174.0" mnemonicParsing="false" onAction="#changePass" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #ffffff;" text="Update">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
             <Label fx:id="wrg" layoutX="172.0" layoutY="211.0" prefHeight="18.0" prefWidth="149.0" textFill="RED" />
-            <TextField fx:id="newUser" layoutX="173.0" layoutY="23.0" promptText="New Username" />
-            <TextField fx:id="newEmail" layoutX="174.0" layoutY="72.0" promptText="New Email" />
-            <PasswordField fx:id="newPass" layoutX="173.0" layoutY="125.0" promptText="New Password" />
-            <PasswordField fx:id="oldPass" layoutX="173.0" layoutY="174.0" promptText="Verify New Password" />
-            <Button layoutX="181.0" layoutY="289.0" mnemonicParsing="false" onAction="#deleteUser" text="Delete Account" textFill="RED" />
-            <PasswordField fx:id="dPass" layoutX="175.0" layoutY="250.0" promptText="Password" />
-            <Text fill="#0589ff" layoutX="40.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete Account">
+            <TextField fx:id="newUser" layoutX="185.0" layoutY="23.0" prefHeight="30.0" prefWidth="150.0" promptText="New Username" />
+            <TextField fx:id="newEmail" layoutX="185.0" layoutY="71.0" prefHeight="30.0" prefWidth="150.0" promptText="New Email" />
+            <PasswordField fx:id="newPass" layoutX="185.0" layoutY="125.0" prefHeight="30.0" prefWidth="150.0" promptText="New Password" />
+            <PasswordField fx:id="oldPass" layoutX="184.0" layoutY="174.0" prefHeight="30.0" prefWidth="150.0" promptText="Verify New Password" />
+            <Button layoutX="186.0" layoutY="288.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="26.0" prefWidth="145.0" style="-fx-background-color: #FF0000;" text="Delete Account" textFill="WHITE">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+            <PasswordField fx:id="dPass" layoutX="185.0" layoutY="249.0" promptText="Password" />
+            <Text fill="WHITE" layoutX="24.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete Account">
+               <font>
+                  <Font size="18.0" />
                </font>
             </Text>
             <Label fx:id="crt" layoutX="174.0" layoutY="212.0" prefHeight="18.0" prefWidth="242.0" textFill="#05ef01" />
