@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
@@ -19,6 +20,11 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Text>
+            <Button layoutX="23.0" layoutY="13.0" mnemonicParsing="false" onAction="#goBack" style="-fx-background-color: #005e82;">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CHEVRON_LEFT" />
+               </graphic>
+            </Button>
          </children>
       </AnchorPane>
    </top>

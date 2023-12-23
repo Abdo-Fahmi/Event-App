@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
@@ -70,6 +71,14 @@
                </font>
             </Text>
             <Label fx:id="crt" layoutX="174.0" layoutY="212.0" prefHeight="18.0" prefWidth="242.0" textFill="#05ef01" />
+            <Button layoutX="24.0" layoutY="437.0" mnemonicParsing="false" onAction="#switchCreateEvent" prefHeight="40.0" prefWidth="144.0" style="-fx-background-color: #12111A;" text="Create Event" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PLUS" />
+               </graphic>
+            </Button>
          </children>
       </AnchorPane>
    </center>

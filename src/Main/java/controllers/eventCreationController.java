@@ -31,6 +31,11 @@ public class eventCreationController {
         }
     }
 
+    @FXML
+    private void goBack(){
+        pageNavigator.loadPage("/MY_PROFILE_PAGE.fxml");
+    }
+
     //removing possible labels from past input
     public void initialize() {
         crt.setVisible(false);

@@ -19,9 +19,9 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Text>
-            <Button alignment="CENTER" layoutX="22.0" layoutY="9.0" mnemonicParsing="false" onAction="#goBack" prefHeight="30.0" prefWidth="34.0" style="-fx-background-color: #ffffff;" textAlignment="JUSTIFY">
+            <Button alignment="CENTER" layoutX="22.0" layoutY="9.0" mnemonicParsing="false" onAction="#goBack" prefHeight="30.0" prefWidth="34.0" style="-fx-background-color: #005e82;" textAlignment="JUSTIFY">
                <graphic>
-                  <FontAwesomeIconView fill="#35ae2f" glyphName="CHEVRON_LEFT" textAlignment="JUSTIFY">
+                  <FontAwesomeIconView fill="WHITE" glyphName="CHEVRON_LEFT" textAlignment="JUSTIFY">
                      <font>
                         <Font size="14.0" />
                      </font>

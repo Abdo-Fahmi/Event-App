@@ -35,6 +35,7 @@ public class profileController {
             } else wrg.setText("Username already exists!");
         } else wrg.setText("Invalid Username!");
     }
+
     @FXML
     private void updateEmail() {
         resetLabels();
@@ -68,6 +69,11 @@ public class profileController {
             db.deleteAccount(user.getUserID());
             app.changeScenes(pageNavigator.LOG_IN);
         } else wrg.setText("Incorrect password!");
+    }
+
+    @FXML
+    public void switchCreateEvent() {
+        pageNavigator.loadPage(pageNavigator.CREATE_EVENT);
     }
 
     //applying filters to the user input similar to the ones put on the signup page
