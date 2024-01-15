@@ -1,6 +1,6 @@
 package proxyFlyweight;
 
-import core.dbUtils;
+import models.dbUtils;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -76,6 +76,9 @@ public class proxyEvent implements eventInterface {
         hbox.getChildren().setAll(box, show);
 
         return hbox;
+    }
+    public int getEventID() {
+        return eventID;
     }
 
     @Override

@@ -3,7 +3,7 @@ package controllers;
 import java.io.IOException;
 
 import core.App;
-import core.dbUtils;
+import models.dbUtils;
 import core.inputFilter;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -19,7 +19,6 @@ public class signupController {
             checks for at least one dot in the domain name and after the dot, it consists only the letters. The top-level domain should have only two to six letters which is also checked by this regex.
     */
     private static final dbUtils db = dbUtils.getInstance();
-    @FXML private Button signUp;
     @FXML private Label wrg;
     @FXML private TextField tfUsername;
     @FXML private TextField tfEmail;
@@ -87,7 +86,6 @@ public class signupController {
             wrg.setText("Password are not identical!");
             return false;
         }
-
         return true;
     }
 

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 import core.currUser;
-import core.dbUtils;
+import models.dbUtils;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.HBox;

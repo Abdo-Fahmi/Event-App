@@ -6,4 +6,5 @@ import proxyFlyweight.proxyEvent;
 
 public interface collectionInterface {
     iterator createBaseIterator(ArrayList<proxyEvent> eventList);
+    iterator createNewIterator(ArrayList<proxyEvent> eventList);
 }

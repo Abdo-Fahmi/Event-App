@@ -1,5 +1,7 @@
 package core;
 
+import models.dbUtils;
+
 public class currUser {
     private static currUser userInstance;
     private static dbUtils db;

@@ -1,9 +1,11 @@
-package core;
+package models;
 
 import java.sql.*;
 import java.util.ArrayList;
 
 import controllers.Observer;
+import core.Observable;
+import core.currUser;
 import proxyFlyweight.event;
 import proxyFlyweight.proxyEvent;
 import proxyFlyweight.proxyFactory;
@@ -126,6 +128,47 @@ public class dbUtils implements Observable {
         } return true;
     }
 
+    public ArrayList<proxyEvent> refreshEvents() {
+        ArrayList<proxyEvent> page = new ArrayList<>();
+        try {
+            stmt = conn.prepareStatement("""
+                SELECT event_id, name, location, date
+                FROM events
+                ORDER BY event_id
+                DESC LIMIT 9""");
+            res = stmt.executeQuery();
+            while(res.next()) {
+                proxyEvent event = proxyFactory.getProxyEvent(res.getInt("event_id"), res.getString("name"), res.getString("location"), res.getDate("date"));
+                page.add(event);
+            }
+        } catch (SQLException e){
+            System.out.println(e.getMessage());
+            return null;
+        }   return page;
+    }
+
+    public ArrayList<proxyEvent> getNextPageEvents(int lastID) {
+        ArrayList<proxyEvent> nextPage = new ArrayList<>();
+        try {
+            stmt = conn.prepareStatement("""
+                SELECT event_id, name, location, date
+                FROM events
+                WHERE event_id < ?
+                ORDER BY event_id
+                DESC LIMIT 9""");
+            stmt.setInt(1, lastID);
+            res = stmt.executeQuery();
+            while(res.next()) {
+                proxyEvent event = proxyFactory.getProxyEvent(res.getInt("event_id"), res.getString("name"), res.getString("location"), res.getDate("date"));
+                nextPage.add(event);
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+        return nextPage;
+    }
+
     public ArrayList<proxyEvent> getEvents() {
         ArrayList<proxyEvent> allEvents = new ArrayList<>();
         try {
@@ -165,6 +208,7 @@ public class dbUtils implements Observable {
             stmt.setInt(1, id);
             res = stmt.executeQuery();
             res.next();
+
             int creator_id = res.getInt("user_id");
             Event = new event(id,res.getString("name"),res.getString("location"),res.getDate("date"),res.getString("description"));
 

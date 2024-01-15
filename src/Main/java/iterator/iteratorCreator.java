@@ -9,5 +9,10 @@ public class iteratorCreator implements collectionInterface{
     public baseIterator createBaseIterator(ArrayList<proxyEvent> eventList) {
         return new baseIterator(eventList);
     }
-    
+
+    @Override
+    public newIterator createNewIterator(ArrayList<proxyEvent> eventList) {
+        return new newIterator(eventList);
+    }
+
 }

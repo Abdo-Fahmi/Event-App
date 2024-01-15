@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import core.App;
 import core.currUser;
-import core.dbUtils;
+import models.dbUtils;
 import core.inputFilter;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
