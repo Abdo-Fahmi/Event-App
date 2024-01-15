@@ -51,8 +51,9 @@ public class eventBrowserController implements Observer{
     //the update fxn called by the observable to refresh the eventlist on the browsing page
     @Override
     public void updateEventCollection() {
-    //    eventsToDisplay = db.refreshEvents();
         eventBrowserModel.refreshPage();
+        eventBrowserModel.getNextPage();
+        eventBrowserModel.btnVisibility(nextEventPage, prevEventPage);
         System.out.println("new events received to event browsing page");
     }
 }

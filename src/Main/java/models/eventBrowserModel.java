@@ -21,7 +21,9 @@ public class eventBrowserModel {
             page.clear();
             pageCollection.clear();
             page.addAll(dbUtils.getInstance().refreshEvents());
-            pageCollection.add(page);
+            ArrayList<proxyEvent> temp = new ArrayList<>(page);
+            pageCollection.add(temp);
+            lastIndex = page.get(page.size()-1).getEventID();
         }
         currPageIndex = 0;
     }
@@ -33,8 +35,10 @@ public class eventBrowserModel {
 
     public static boolean getNextPage() {
         ArrayList<proxyEvent> temp = dbUtils.getInstance().getNextPageEvents(lastIndex);
-        if(temp == null) return true;
+        if(temp == null || temp.isEmpty()) return true;
+        System.out.println(temp);
         pageCollection.add(temp);
+        System.out.println(temp.size());
         lastIndex = temp.get(temp.size()-1).getEventID();
         return temp.size() != 9;
     }
