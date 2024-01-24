@@ -24,7 +24,14 @@
       </AnchorPane>
    </bottom>
    <top>
-      <AnchorPane prefHeight="50.0" prefWidth="700.0" style="-fx-background-color: #12111A;" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="50.0" prefWidth="700.0" style="-fx-background-color: #12111A;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="refreshBtn" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#refreshPage" style="-fx-background-color: #005e82;">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" />
+               </graphic>
+            </Button>
+         </children></AnchorPane>
    </top>
    <center>
       <GridPane fx:id="eventGrid" gridLinesVisible="true" BorderPane.alignment="CENTER">

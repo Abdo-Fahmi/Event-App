@@ -36,9 +36,7 @@ public class eventBrowserModel {
     public static boolean getNextPage() {
         ArrayList<proxyEvent> temp = dbUtils.getInstance().getNextPageEvents(lastIndex);
         if(temp == null || temp.isEmpty()) return true;
-        System.out.println(temp);
         pageCollection.add(temp);
-        System.out.println(temp.size());
         lastIndex = temp.get(temp.size()-1).getEventID();
         return temp.size() != 9;
     }
