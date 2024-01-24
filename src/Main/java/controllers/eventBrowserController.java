@@ -11,6 +11,7 @@ import java.util.Objects;
 public class eventBrowserController implements Observer{
     private static dbUtils db;
     private static boolean dbIsEmpty;
+    private static boolean refreshFlag = false;
     //This list will only be updated when informed of a change by the database, instead of every time the page is loaded
     @FXML private GridPane eventGrid;
     @FXML private Button nextEventPage;
@@ -48,8 +49,12 @@ public class eventBrowserController implements Observer{
             db.subscribe(this);
             System.out.println("Initial batch of events received to browsing page");
         }
-        refreshBtn.setVisible(false);
-        eventBrowserModel.refreshPage();
+
+        if(!refreshFlag) {
+            refreshBtn.setVisible(false);
+            refreshFlag = true;
+        }
+        eventBrowserModel.startPage();
         eventBrowserModel.displayPage(eventGrid);
         dbIsEmpty = eventBrowserModel.getNextPage();
         eventBrowserModel.btnVisibility(nextEventPage, prevEventPage);
@@ -65,4 +70,3 @@ public class eventBrowserController implements Observer{
         System.out.println("new events received to event browsing page");
     }
 }
-    

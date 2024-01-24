@@ -13,18 +13,17 @@ public class eventBrowserModel {
     private static int lastIndex = page.get(page.size()-1).getEventID();
     private static int currPageIndex = 0;
 
+    public static void startPage() {
+        ArrayList<proxyEvent> temp = new ArrayList<>(page);
+        pageCollection.add(temp);
+    }
     public static void refreshPage() {
-        if(pageCollection.isEmpty()) {
-            ArrayList<proxyEvent> temp = new ArrayList<>(page);
-            pageCollection.add(temp);
-        } else {
-            page.clear();
-            pageCollection.clear();
-            page.addAll(dbUtils.getInstance().refreshEvents());
-            ArrayList<proxyEvent> temp = new ArrayList<>(page);
-            pageCollection.add(temp);
-            lastIndex = page.get(page.size()-1).getEventID();
-        }
+        page.clear();
+        pageCollection.clear();
+        page.addAll(dbUtils.getInstance().refreshEvents());
+        ArrayList<proxyEvent> temp = new ArrayList<>(page);
+        pageCollection.add(temp);
+        lastIndex = page.get(page.size()-1).getEventID();
         currPageIndex = 0;
     }
 
@@ -63,4 +62,5 @@ public class eventBrowserModel {
         prev.setVisible(currPageIndex != 0);
         next.setVisible(currPageIndex != pageCollection.size()-1);
     }
+
 }

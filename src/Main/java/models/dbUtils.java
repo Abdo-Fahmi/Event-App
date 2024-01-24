@@ -169,22 +169,6 @@ public class dbUtils implements Observable {
         return nextPage;
     }
 
-    public ArrayList<proxyEvent> getEvents() {
-        ArrayList<proxyEvent> allEvents = new ArrayList<>();
-        try {
-            stmt = conn.prepareStatement("SELECT event_id, name, location, date FROM events");
-
-            res = stmt.executeQuery();
-            while(res.next()) {
-                proxyEvent proxy = proxyFactory.getProxyEvent(res.getInt("event_id"),res.getString("name"),res.getString("location"),res.getDate("date"));
-                allEvents.add(proxy);
-            } 
-        } catch(SQLException e) {
-            System.out.println(e.getMessage());
-            return null;
-        }   return allEvents;
-    }
-
     public ArrayList<proxyEvent> getMyEvents(int id) {
         ArrayList<proxyEvent> allEvents = new ArrayList<>();
         try {
